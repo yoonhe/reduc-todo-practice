@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+.todo-list-box dt,
+dd {
+  display: flex;
+}
+.todo-list-box dt > *,
+dd > * {
+  width: 100%;
+}
+
+.todo-list-box .controler .checked.on {
+  background: blue;
+}
+
+.group-list {
+  display: flex;
+}
+.group-list > * {
+  width: 100%;
+  text-align: center;
+}
+
+.group-list > *.on {
+  color: red;
+}
