@@ -11,7 +11,7 @@ const initialState = {
   inputValue: "",
   todoList: [],
   groupList: [
-    { mode: "All", isClicked: false },
+    { mode: "All", isClicked: true },
     { mode: "Complete", isClicked: false },
     { mode: "Active", isClicked: false }
   ],
@@ -65,6 +65,7 @@ const todoReducer = (state = initialState, action) => {
           }
         })
       });
+
     case COMPLETETODO:
       let newTodos = JSON.parse(JSON.stringify(state.todoList));
       return Object.assign({}, state, {
