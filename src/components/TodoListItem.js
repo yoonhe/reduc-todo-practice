@@ -4,10 +4,14 @@ import { deleteTodo, completeTodo } from "../actions";
 
 class TodoListItem extends Component {
   render() {
+    const style = {
+      textDecoration : this.props.todo.isChecked ? "line-through" : "none"
+    }
     const onOffClass = this.props.todo.isChecked ? " on" : "";
+    
     return (
       <dd>
-        <p>{this.props.todo.value}</p>
+        <p style={style}>{this.props.todo.value}</p>
         <p className="controler">
           <button
             className="delete"

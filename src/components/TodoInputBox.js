@@ -12,11 +12,11 @@ class TodoInputBox extends Component {
           value={this.props.value}
         />
         <p className="btn-box">
-          <button className="cancle" onClick={() => this.props.writeCancle()}>Cancle</button>
+          <button className="cancle" onClick={() => this.props.resetInput()}>Cancle</button>
           <button
             className="add"
             onClick={() =>
-              this.props.value !== "" && this.props.addTodo(Date.now())
+              this.props.value !== "" && (this.props.addTodo(Date.now()), this.props.resetInput())
             }
           >
             Add Todo
@@ -37,7 +37,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     changeValue: value => dispatch(writeTodo(value)),
-    writeCancle: () => dispatch(writeTodo("")),
+    resetInput: () => dispatch(writeTodo("")),
     addTodo: date => dispatch(addTodo(date))
   };
 };

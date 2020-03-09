@@ -1,5 +1,4 @@
 export const WRITETODO = "WRITETODO";
-export const WRITETODOCANCLE = "WRITETODOCANCLE";
 export const ADDTODO = "ADDTODO";
 export const CLICKGROUP = "CLICKGROUP";
 export const DELETETODO = "DELETETODO";
@@ -12,16 +11,11 @@ export function writeTodo(inputValue) {
   };
 }
 
-export function writeTodoCancle() {
-  return {
-    type: WRITETODOCANCLE
-  };
-}
-
-export function addTodo(currentTime) {
+export function addTodo(currentTime, callback) {
   return {
     type: ADDTODO,
-    key: currentTime
+    key: currentTime,
+    callback : callback
   };
 }
 

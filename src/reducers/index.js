@@ -1,6 +1,5 @@
 import {
   WRITETODO,
-  WRITETODOCANCLE,
   ADDTODO,
   CLICKGROUP,
   DELETETODO,
@@ -23,11 +22,6 @@ const todoReducer = (state = initialState, action) => {
     case WRITETODO:
       return Object.assign({}, state, {
         inputValue: action.value
-      });
-
-    case WRITETODOCANCLE:
-      return Object.assign({}, state, {
-        inputValue: ""
       });
 
     case ADDTODO:
