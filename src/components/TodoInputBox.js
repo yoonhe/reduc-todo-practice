@@ -34,6 +34,7 @@ const mapStateToProps = state => {
   };
 };
 
+// action이 발생되면 dispatch가 받고 dispathch는 reducer를 호출한다
 const mapDispatchToProps = dispatch => {
   return {
     changeValue: value => dispatch(writeTodo(value)),

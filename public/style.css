@@ -47,8 +47,7 @@ dd > * {
 .todo-list-box .controler button + button{margin-left:10px;}
 .todo-list-box .controler button:after{display:block;position: absolute;top: 50%;left: 50%;width: 15px;transform: translate(-50%,-50%);content:'';}
 .todo-list-box .controler .delete:after{height: 3px;border-radius: 5px;background:#22252a;}
-.todo-list-box .controler .checked{transition:0.3s linear;}
-.todo-list-box .controler .checked:after{width:12px;height: 6px;border:solid #22252a;border-width:0 0 3px 3px;border-radius:2px;transform:rotate(-44deg) translate(-7%,-99%);transition:0.3s linear;}
+.todo-list-box .controler .checked:after{width:12px;height: 6px;border:solid #22252a;border-width:0 0 3px 3px;border-radius:2px;transform:rotate(-44deg) translate(-7%,-99%);}
 .todo-list-box .controler .checked.on{
   background: #4b6eaf;
 }
