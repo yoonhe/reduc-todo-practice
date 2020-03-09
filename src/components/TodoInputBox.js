@@ -12,8 +12,9 @@ class TodoInputBox extends Component {
           value={this.props.value}
         />
         <p className="btn-box">
-          <button onClick={() => this.props.writeCancle()}>Cancle</button>
+          <button className="cancle" onClick={() => this.props.writeCancle()}>Cancle</button>
           <button
+            className="add"
             onClick={() =>
               this.props.value !== "" && this.props.addTodo(Date.now())
             }

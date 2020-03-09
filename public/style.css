@@ -1,32 +1,55 @@
 * {
   padding: 0;
   margin: 0;
+  color:#22252a
 }
+button,a{border:none;}
 ul,
 li {
   list-style-type: none;
 }
+
+#root > div {margin:50px auto 0;max-width:700px;}
+
+.todo-input-box input {display:block;width:100%;padding:10px;height:40px;border:1px solid #dcdcdc;border-radius:5px;box-sizing:border-box;}
+.todo-input-box .btn-box {margin-top:20px;}
+.todo-input-box .btn-box > button{padding:10px;border:none;color:#fff;border-radius:5px;}
+.todo-input-box .btn-box > button + button{margin-left:15px;}
+.todo-input-box .btn-box > .cancle{background:#dc3644}
+.todo-input-box .btn-box > .add{background:#27a844}
+
+.group-list {margin-top:50px;padding:10px;background:#e8ecef;border-radius: 5px;}
+.group-list > * {display:inline-block;}
+.group-list > *.on {color:royalblue}
+.group-list > * + *:before {display:inline-block;margin:0 10px;content:'/';}
+.group-list > *.on:before{color:#22252a}
+
+
+.todo-list-box{margin-top:50px;background:#22252a;}
 .todo-list-box dt,
 dd {
   display: flex;
+  align-items: center;
+  padding:15px;
+  color:#fff;
 }
+.todo-list-box dt *,
+dd *{color:#fff}
+.todo-list-box > * + * {border-top:1px solid rgba(225,225,225,0.3);}
 .todo-list-box dt > *,
 dd > * {
   width: 100%;
 }
+.todo-list-box dt > *:nth-child(2), .todo-list-box dd > *:nth-child(2){width:60%;}
 
-.todo-list-box .controler .checked.on {
-  background: blue;
-}
 
-.group-list {
-  display: flex;
+.todo-list-box .controler button{position:relative;text-indent:-999999rem;width:30px;height:30px;background:#fff;border-radius:50%;cursor:pointer;}
+.todo-list-box .controler button + button{margin-left:10px;}
+.todo-list-box .controler button:after{display:block;position: absolute;top: 50%;left: 50%;width: 15px;transform: translate(-50%,-50%);content:'';}
+.todo-list-box .controler .delete:after{height: 3px;border-radius: 5px;background:#22252a;}
+.todo-list-box .controler .checked{transition:0.3s linear;}
+.todo-list-box .controler .checked:after{width:12px;height: 6px;border:3px solid;border-width:0 0 3px 3px;border-radius:2px;transform:rotate(-44deg) translate(-7%,-99%);transition:0.3s linear;}
+.todo-list-box .controler .checked.on{
+  background: #4b6eaf;
 }
-.group-list > * {
-  width: 100%;
-  text-align: center;
-}
-
-.group-list > *.on {
-  color: red;
-}
+.todo-list-box .controler .checked.on:after{border-color:#fff;}
